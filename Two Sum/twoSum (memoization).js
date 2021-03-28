@@ -39,3 +39,22 @@ const twoSumFast = (numbers, sum) => {// O(n) big O time complexity
 console.log(twoSumFast(numbers, sum))
 // returns => [0,4] which are the indexes of the correct numbers
 // because 1 + 9  = 10
+
+
+
+const twoSum = function(nums, target) {
+    let firstIndex = 0;
+    let secondIndex = 1;
+    while (nums[firstIndex] + nums[secondIndex] != target){
+        ++secondIndex
+        if(secondIndex == nums.length) {
+			++firstIndex
+			secondIndex = firstIndex + 1
+		}
+        if(firstIndex == nums.length) break
+    }
+    return [firstIndex, secondIndex]
+}
+
+console.log(twoSum(numbers, sum))
+
