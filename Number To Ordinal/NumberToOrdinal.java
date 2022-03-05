@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Main {
+public class NumberToOrdinal {
 
 	static Map<Integer, String> ordinalIndicators = new HashMap<Integer, String>() {{
 		put(1, "st");
