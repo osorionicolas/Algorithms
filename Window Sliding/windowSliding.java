@@ -1,3 +1,11 @@
+/*
+ * The general use of the Sliding window technique can be demonstrated as follows:
+ *
+ * Find the size of the window required 
+ * Compute the result for 1st window, i.e. from the start of the data structure
+ * Then use a loop to slide the window by 1, and keep computing the result window by window.
+ */
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
