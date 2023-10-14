@@ -9,12 +9,18 @@ public class Palindrome {
     }
 
     private static boolean isPalidrome(String word) {
-
-        char[] wordChar = word.toCharArray();
-        String result = IntStream.range(0, wordChar.length)
-                .mapToObj(i -> wordChar[wordChar.length - i - 1])
-                .map(Object::toString)
-                .collect(Collectors.joining(""));
+        String result = revert(word);
         return result.equals(word);
+    }
+
+    private static String revert (String word) {
+        int half = word.length() / 2;
+        char[] array = word.toCharArray();
+        for(int i = 0; i < half; i++) {
+            char aux = array[i];
+            array[i] = array[word.length() - 1 - i];
+            array[word.length() - 1 - i] = aux;
+        }
+        return new String(array);
     }
 }
